@@ -1,4 +1,5 @@
 import Link from "next/link";
+import StatsSection from "@/components/StatsSection";
 
 const chapters = [
   {
@@ -437,29 +438,7 @@ function RegisterCTA() {
   );
 }
 
-function StatsSection() {
-  return (
-    <section className="relative py-20 border-t border-gold/10">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {[
-            { num: "9", label: "فصول شاملة" },
-            { num: "50+", label: "ساعة تعليمية" },
-            { num: "500+", label: "متدرب مسجل" },
-            { num: "100%", label: "احترافية" },
-          ].map((stat, i) => (
-            <div key={i}>
-              <div className="text-3xl sm:text-4xl font-black gold-text mb-2">
-                {stat.num}
-              </div>
-              <div className="text-sm text-zinc-500">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+
 
 function Footer() {
   return (

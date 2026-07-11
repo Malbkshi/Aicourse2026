@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@import "@fontsource/tajawal/200.css";
+@import "@fontsource/tajawal/300.css";
+@import "@fontsource/tajawal/400.css";
+@import "@fontsource/tajawal/500.css";
+@import "@fontsource/tajawal/700.css";
+@import "@fontsource/tajawal/800.css";
+@import "@fontsource/tajawal/900.css";
+
+:root {
+  --gold: #D4AF37;
+  --gold-light: #F5E6B8;
+  --gold-dark: #B8860B;
+  --bg-dark: #0A0A0F;
+  --bg-card: #111118;
+  --bg-section: #0D0D14;
+  --text-light: #F5F5F0;
+  --text-muted: #8B8B8B;
+  --border-gold: rgba(212, 175, 55, 0.2);
+  --gold-gradient: linear-gradient(135deg, #D4AF37, #F5E6B8, #D4AF37);
+}
+
+@theme inline {
+  --color-gold: #D4AF37;
+  --color-gold-light: #F5E6B8;
+  --color-gold-dark: #B8860B;
+  --color-bg-dark: #0A0A0F;
+  --color-bg-card: #111118;
+  --color-bg-section: #0D0D14;
+  --font-sans: "Tajawal", sans-serif;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) transparent;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  font-family: "Tajawal", sans-serif;
+  direction: rtl;
+}
+
+.gold-text {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-border {
+  border-color: var(--border-gold);
+}
+
+.glass {
+  background: rgba(17, 17, 24, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-gold);
+}
+
+.glow {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.15), 0 0 40px rgba(212, 175, 55, 0.05);
+}
+
+.glow-text {
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.gradient-overlay {
+  background: linear-gradient(180deg, transparent 0%, rgba(10, 10, 15, 0.8) 50%, var(--bg-dark) 100%);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+.animate-delay-1 { animation-delay: 0.1s; }
+.animate-delay-2 { animation-delay: 0.2s; }
+.animate-delay-3 { animation-delay: 0.3s; }
+.animate-delay-4 { animation-delay: 0.4s; }
+.animate-delay-5 { animation-delay: 0.5s; }

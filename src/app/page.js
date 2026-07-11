@@ -34,7 +34,7 @@ const chapters = [
   {
     id: 6,
     title: "النماذج المشهورة",
-    desc: "GPT-4o، Claude 3.7، Gemini 2.0، Llama 3.1، Qwen 2.5، DeepSeek، Mistral — مقارنة شاملة.",
+    desc: "GPT 5.6، Fable 5، Gemini 3.0، Llama 4، Qwen 3، DeepSeek — مقارنة شاملة.",
     icon: "🏆",
   },
   {
@@ -71,12 +71,12 @@ const features = [
     desc: "نخبة من المتخصصين في الذكاء الاصطناعي",
   },
   {
-    title: "شهادة معتمدة",
-    desc: "شهادة إتمام معتمدة عند إكمال الدورة والمشروع النهائي",
+    title: "دعم فني مستمر",
+    desc: "فريق دعم متاح للإجابة على استفساراتك طوال مدة الدورة",
   },
   {
     title: "محتوى محدث 2026",
-    desc: "أحدث النماذج والتقنيات: GPT-4o، Claude 3.7، Sora، Suno v4",
+    desc: "أحدث النماذج والتقنيات: GPT 5.6، Fable 5، Sora، Suno 5.5",
   },
   {
     title: "دعم مستمر",
@@ -107,7 +107,7 @@ function Header() {
           <Link href="/" className="flex items-center gap-2">
             <span className="text-2xl">✨</span>
             <span className="text-gold font-bold text-lg tracking-wide">
-              AI Professional
+              ذكاء اصطناعي ليبي
             </span>
           </Link>
           <nav className="hidden md:flex items-center gap-8">
@@ -196,7 +196,7 @@ function Hero() {
             <span className="text-gold">●</span> تطبيقات عملية
           </span>
           <span className="flex items-center gap-2">
-            <span className="text-gold">●</span> شهادة معتمدة
+            <span className="text-gold">●</span> محتوى عربي متكامل
           </span>
         </div>
       </div>
@@ -233,7 +233,7 @@ function CourseOverview() {
             {
               title: "ماذا ستتعلم؟",
               items: [
-                "المفاهيم الأساسية: البرمجة، الإنترنت، HTTP، DNS",
+                "بداية الذكاء الاصطناعي",
                 "معمارية Transformer والانتباه الذاتي",
                 "الفرق بين CPU و GPU وأهميتهما للذكاء الاصطناعي",
                 "التدريب: Pre-training، Fine-tuning، RLHF",
@@ -254,7 +254,7 @@ function CourseOverview() {
                 "فهم عميق لكيفية عمل الذكاء الاصطناعي",
                 "القدرة على استخدام أشهر أدوات AI",
                 "بناء مساعد شخصي عربي كامل",
-                "شهادة إتمام معتمدة",
+                "مشروع تطبيقي عملي",
               ],
             },
           ].map((card, i) => (
@@ -273,6 +273,29 @@ function CourseOverview() {
               </ul>
             </div>
           ))}
+        </div>
+        <div className="mt-16 glass rounded-3xl p-8 sm:p-10 text-center glow max-w-2xl mx-auto">
+          <div className="text-5xl mb-4">👨‍🏫</div>
+          <h3 className="text-2xl font-bold text-white mb-2">
+            المدرب
+          </h3>
+          <div className="w-16 h-0.5 bg-gold/50 mx-auto mb-4" />
+          <p className="text-xl font-bold gold-text mb-1">
+            المهندس مصطفي محمود البكشي
+          </p>
+          <p className="text-zinc-400 text-sm mb-4">
+            متخصص في الذكاء الاصطناعي وتطوير التطبيقات
+          </p>
+          <div className="flex items-center justify-center gap-6 text-sm text-zinc-500">
+            <span className="flex items-center gap-2">
+              <span className="text-gold">📧</span>
+              albkshi@ai2027.ly
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="text-gold">📱</span>
+              0913555150
+            </span>
+          </div>
         </div>
       </div>
     </section>
@@ -389,7 +412,7 @@ function RegisterCTA() {
             "اختبر مستواك قبل التسجيل",
             "تعلم بأحدث النماذج والأدوات",
             "مشروع نهائي تطبيقي",
-            "شهادة معتمدة عند الإتمام",
+            "دعم فني وتوجيه مستمر",
           ].map((req, i) => (
             <div
               key={i}
@@ -447,7 +470,7 @@ function Footer() {
             <div className="flex items-center gap-2 mb-4">
               <span className="text-2xl">✨</span>
               <span className="text-gold font-bold text-lg">
-                AI Professional
+                ذكاء اصطناعي ليبي
               </span>
             </div>
             <p className="text-sm text-zinc-500 leading-relaxed">
@@ -483,14 +506,14 @@ function Footer() {
           <div>
             <h4 className="text-gold font-bold mb-4">تواصل معنا</h4>
             <ul className="space-y-2 text-sm text-zinc-500">
-              <li>بريد إلكتروني: info@ai-professional.com</li>
+              <li>بريد إلكتروني: info@aicourse.com</li>
               <li>الدورة بالكامل عن بُعد</li>
               <li>دعم فني على مدار الساعة</li>
             </ul>
           </div>
         </div>
         <div className="text-center text-sm text-zinc-600 pt-8 border-t border-gold/10">
-          © 2026 AI Professional Course. جميع الحقوق محفوظة.
+          © 2026 ذكاء اصطناعي ليبي. جميع الحقوق محفوظة.
         </div>
       </div>
     </footer>

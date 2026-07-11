@@ -1,7 +1,7 @@
 import RegistrationForm from "./RegistrationForm";
 
 export const metadata = {
-  title: "تسجيل الطلاب | AI Professional Course",
+  title: "تسجيل الطلاب | ذكاء اصطناعي ليبي",
   description:
     "سجل في الدورة الاحترافية للذكاء الاصطناعي. ابدأ رحلتك من الأساسيات إلى الاحتراف.",
 };

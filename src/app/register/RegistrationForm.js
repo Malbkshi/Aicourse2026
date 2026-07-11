@@ -64,17 +64,26 @@ const assessmentQuestions = [
       { value: 0, label: "أفضل شيئًا خفيفًا في البداية" },
     ],
   },
+  {
+    id: "payMethod",
+    question: "هل ترغب في الدورة عبر الإنترنت و الدفع عبر بطاقة ائتمان؟",
+    options: [
+      { value: 2, label: "نعم، أفضّل التعلم عبر الإنترنت والدفع بالبطاقة" },
+      { value: 1, label: "أفضّل التعلم عبر الإنترنت ولكن بطريقة دفع أخرى" },
+      { value: 0, label: "أفضّل التعلم حضوريًا" },
+    ],
+  },
 ];
 
 function getLevel(score) {
-  if (score <= 2)
+  if (score <= 3)
     return {
       label: "تحتاج دورة تمهيدية",
       color: "text-amber-400",
       icon: "📚",
       desc: "ننصحك بالبدء بدورة تمهيدية مجانية في أساسيات الذكاء الاصطناعي قبل التسجيل في الدورة الاحترافية.",
     };
-  if (score <= 5)
+  if (score <= 7)
     return {
       label: "جاهز للبدء",
       color: "text-blue-400",
@@ -119,7 +128,7 @@ export default function RegistrationForm() {
   function handleAssessmentSubmit(e) {
     e.preventDefault();
     const total = Object.values(answers).reduce((sum, v) => sum + v, 0);
-    if (Object.keys(answers).length < 5) return;
+    if (Object.keys(answers).length < 6) return;
     setFormData((prev) => ({ ...prev, assessmentScore: total }));
     setStep("result");
   }
@@ -199,7 +208,7 @@ export default function RegistrationForm() {
             اختبر معلوماتك
           </h3>
           <p className="text-sm text-zinc-400">
-            أجب عن 5 أسئلة لتحديد مستواك ومساعدتك على البدء من المكان المناسب
+            أجب عن 6 أسئلة لتحديد مستواك ومساعدتك على البدء من المكان المناسب
           </p>
         </div>
 
@@ -236,11 +245,11 @@ export default function RegistrationForm() {
 
         <div className="flex items-center justify-between">
           <span className="text-sm text-zinc-500">
-            {answeredCount} / 5 تم الإجابة
+            {answeredCount} / 6 تم الإجابة
           </span>
           <button
             type="submit"
-            disabled={answeredCount < 5}
+            disabled={answeredCount < 6}
             className="px-8 py-3 rounded-xl text-lg font-bold text-bg-dark bg-gold hover:bg-gold-light transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             عرض النتيجة
@@ -253,7 +262,7 @@ export default function RegistrationForm() {
   if (step === "result") {
     const total = formData.assessmentScore;
     const level = getLevel(total);
-    const canRegister = total >= 3;
+    const canRegister = total >= 4;
 
     return (
       <div className="space-y-8">
@@ -266,10 +275,10 @@ export default function RegistrationForm() {
             <div className="h-2 w-full max-w-xs bg-zinc-700 rounded-full overflow-hidden">
               <div
                 className="h-full bg-gold rounded-full transition-all duration-1000"
-                style={{ width: `${(total / 10) * 100}%` }}
+                style={{ width: `${(total / 12) * 100}%` }}
               />
             </div>
-            <span className="text-gold font-bold text-sm">{total}/10</span>
+            <span className="text-gold font-bold text-sm">{total}/12</span>
           </div>
           <p className="text-zinc-400 mb-6">{level.desc}</p>
 

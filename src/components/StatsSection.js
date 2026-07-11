@@ -34,7 +34,7 @@ export default function StatsSection() {
           </div>
           <div>
             <div className="text-3xl sm:text-4xl font-black gold-text mb-2">
-              50+
+              +10
             </div>
             <div className="text-sm text-zinc-500">ساعة تعليمية</div>
           </div>

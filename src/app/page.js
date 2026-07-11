@@ -290,7 +290,7 @@ function CourseOverview() {
           <div className="flex items-center justify-center gap-6 text-sm text-zinc-500">
             <span className="flex items-center gap-2">
               <span className="text-gold">📧</span>
-              albkshi@ai2027.ly
+              albkshi@gmail.com
             </span>
             <span className="flex items-center gap-2">
               <span className="text-gold">📱</span>
@@ -453,7 +453,7 @@ function Footer() {
               </span>
             </div>
             <p className="text-sm text-zinc-500 leading-relaxed">
-              الدورة الاحترافية الأولى عربيًا في الذكاء الاصطناعي
+              الدورة الاحترافية الأولى في ليبيا في الذكاء الاصطناعي
             </p>
           </div>
           <div>
